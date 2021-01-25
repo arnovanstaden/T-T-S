@@ -7,11 +7,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`${__dirname}/src/layout/index.tsx`),
+        component: require.resolve(`${__dirname}/src/layout/index.js`),
       },
     },
     {
@@ -23,7 +22,7 @@ module.exports = {
         background_color: "#151618",
         theme_color: "#151618",
         display: "standalone",
-        icon: "src/assets/images/logos/webdacity/favicon.png",
+        icon: "src/assets/images/logos/favicon.png",
         crossOrigin: `use-credentials`,
       },
     },

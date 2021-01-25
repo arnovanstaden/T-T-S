@@ -1,0 +1,42 @@
+@import "../../global.scss";
+
+.section {
+    margin: 4rem 0;
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+
+    &.circular {
+        padding: 8rem 0 12rem 0
+    }
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    position: relative;
+    margin-bottom: 6rem;
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+
+        span {
+            color: $light-blue;
+        }
+    }
+
+    .image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 7rem;
+        z-index: -5;
+    }
+
+    &.smaller {
+        margin-bottom: 3rem;
+    }
+}

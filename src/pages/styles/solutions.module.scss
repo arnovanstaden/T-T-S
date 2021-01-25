@@ -1,0 +1,97 @@
+@import "../../global.scss";
+
+.table {
+    display: flex;
+    justify-content: center;
+
+    .column {
+        border-right: 1.5px solid $dark-blue;
+        padding: 1rem 2rem;
+        text-align: center;
+        width: 33%;
+
+        h3 {
+            margin: 0;
+            margin-bottom: 1rem;
+            background-color: $light-blue;
+            color: $white;
+            padding: 0.5rem 0;
+            border-radius: 1rem;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        &:last-child {
+            border: none
+        }
+    }
+}
+
+.solutions {
+    text-align: center;
+
+    .listBlock {
+        background-color: rgba($dark-blue, 0.05);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+
+        h6 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .list {
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin: 0.25rem 0;
+                display: flex;
+                justify-content: center;
+
+                i {
+                    color: $light-blue;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .listGrid {
+        display: flex;
+        column-gap: 2rem;
+
+        .listBlock {
+            width: 50%;
+            text-align: left;
+
+            .list li {
+                justify-content: flex-start;
+            }
+        }
+    }
+
+    .blueBorder {
+        padding: 2rem;
+        border-radius: 1rem;
+        border: 1.5px solid $light-blue;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .blueBlock {
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: $light-blue;
+
+        h3 {
+            color: $white;
+            margin: 0;
+        }
+    }
+}

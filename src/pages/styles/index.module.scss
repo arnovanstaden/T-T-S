@@ -1,0 +1,97 @@
+@import "../../global.scss";
+
+// Grid Generic
+
+.grid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 4rem;
+
+    .image {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .content {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        p {
+            font-size: 1.05rem;
+            margin: 1rem 0;
+            padding-right: 2rem;
+            margin-top: 0;
+        }
+
+        p span {
+            color: $light-blue;
+        }
+    }
+}
+
+.about-grid {
+    .content {
+        p {
+            text-align: right;
+        }
+    }
+}
+
+.solutions-grid {
+    align-items: flex-end;
+
+    .content {
+        align-items: flex-start;
+    }
+}
+
+.solutions-circle {
+    background-color: rgba($dark-blue, 0.05);
+    width: 175vw;
+    height: 175vw;
+    z-index: -5;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: -37.5vw;
+}
+
+.projects-grid {
+    column-gap: 3rem;
+
+    .image {
+        width: 35%;
+    }
+
+    .content {
+        width: 32.5%;
+        justify-content: center;
+
+        p {
+            padding-right: 0;
+            padding-top: 3rem;
+        }
+    }
+
+    .content:first-child {
+
+        p {
+            text-align: right;
+            padding-top: 0;
+            padding-bottom: 3rem;
+        }
+    }
+}
+
+.projects-link {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}

@@ -1,0 +1,72 @@
+@import "../../global.scss";
+
+.landing {
+    height: 100vh;
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-attachment: fixed;
+    // overflow: hidden;
+
+
+    .image {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        .imageCircle {
+            width: 130%;
+            height: 130%;
+            position: absolute;
+            background-color: rgba($light-blue, 0.075);
+            border-radius: 0 50% 50% 50%;
+            z-index: -5;
+            transform: translate(-25%);
+        }
+    }
+
+    .content {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 4rem;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-family: $heading-font;
+            margin: 1rem 0;
+        }
+
+        h1 span,
+        p span {
+            color: $light-blue;
+        }
+    }
+
+    &.swapped {
+        flex-direction: row-reverse;
+    }
+
+
+    @media screen and (min-width: 1600px) {
+
+        .image {
+
+            .imageCircle {
+                width: 125%;
+                height: 125%;
+                transform: translate(-25%);
+            }
+        }
+    }
+}
