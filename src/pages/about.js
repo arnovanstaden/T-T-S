@@ -44,7 +44,32 @@ const about = ({ data }) => {
             <p>Underpinning all TTS solutions is a commitment not only to the employability of the youth, but also to their personal development. Whether we are creating a worker or an entrepreneur, personal mastery and a growth mindset are seen as the key to success.</p>
           </div>
           <div className={styles.images}>
-
+            <div className={styles.imageColumn}>
+              <div className={styles.smallCircle}></div>
+              <Img
+                fluid={data.middleImage2.childImageSharp.fluid}
+                style={{
+                  width: "90%",
+                }}
+                imgStyle={{ objectFit: "contain" }} />
+            </div>
+            <div className={styles.textColumn}>
+              <Img
+                fluid={data.middleImage.childImageSharp.fluid}
+                style={{
+                  width: "80%",
+                }}
+                imgStyle={{ objectFit: "contain" }} />
+            </div>
+            <div className={styles.imageColumn}>
+              <Img
+                fluid={data.middleImage1.childImageSharp.fluid}
+                style={{
+                  width: "90%",
+                }}
+                imgStyle={{ objectFit: "contain" }} />
+              <div className={styles.smallCircle}></div>
+            </div>
           </div>
           <div className={styles.difference}>
             <SectionHeading heading={<h1>Finding a <span>“Why”</span></h1>} />
@@ -52,6 +77,8 @@ const about = ({ data }) => {
 
             <p>Underpinning all TTS solutions is a commitment not only to the employability of the youth, but also to their personal development. Whether we are creating a worker or an entrepreneur, personal mastery and a growth mindset are seen as the key to success.</p>
           </div>
+          <div className={styles.middleCircle}></div>
+
         </div>
       </Section>
 
@@ -165,7 +192,7 @@ export const data = graphql`
     }
     middleImage1: file(relativePath: { eq: "pages/about/middle1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 80)  {
+        fluid(maxWidth: 300, quality: 80)  {
           aspectRatio
           base64
           sizes
@@ -179,7 +206,7 @@ export const data = graphql`
     }
     middleImage2: file(relativePath: { eq: "pages/about/middle2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500, quality: 80)  {
+        fluid(maxWidth: 300, quality: 80)  {
           aspectRatio
           base64
           sizes
