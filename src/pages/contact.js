@@ -67,7 +67,7 @@ const contact = () => {
                             </div>
                         </div>
                         <div className={styles.form}>
-                            <form action="POST" netlify>
+                            <form action="POST" data-netlify="true">
                                 <input type="hidden" name="form-name" value="contact" />
                                 <div className={styles.formGroup}>
                                     <label htmlFor="Name">Your Name</label>
@@ -81,7 +81,7 @@ const contact = () => {
                                     <label htmlFor="Message">Your Message</label>
                                     <textarea name="Message"></textarea>
                                 </div>
-                                <button type="submit">Send Message</button>
+                                <button type="submit">Send</button>
                             </form>
                         </div>
                     </div>

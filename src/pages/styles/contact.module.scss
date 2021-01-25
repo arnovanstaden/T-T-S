@@ -175,4 +175,33 @@
         bottom: 0;
         left: -30vw;
     }
+
+
+    @media screen and (max-width:991px) {
+        .grid {
+            .form {
+                form {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .grid {
+            flex-direction: column;
+            column-gap: 0;
+            row-gap: 2rem;
+
+            .content {
+                width: 100%;
+            }
+
+            .form {
+                width: 100%;
+
+                form {}
+            }
+        }
+    }
 }
