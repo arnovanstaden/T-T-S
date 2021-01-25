@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import { useMediaQuery } from "react-responsive"
 
 // Components
 import Layout from "../components/Layout/Layout";
@@ -24,6 +25,17 @@ const IndexPage = ({ data }) => {
   const imageStyles = {
     objectFit: "contain"
   }
+
+  // Responsive Images
+  const isSmallerScreen = useMediaQuery({ query: '(max-width: 768px)' });
+  let solutionsImage;
+  if (isSmallerScreen) {
+    solutionsImage = data.solutionsImageMobile.childImageSharp.fluid
+  } else {
+    solutionsImage = data.solutionsImage.childImageSharp.fluid
+  }
+
+
 
   return (
     <Layout
@@ -63,7 +75,7 @@ const IndexPage = ({ data }) => {
       <Section circular={true}>
         <div className={`${styles.grid} ${styles.solutionsGrid}`}>
           <div className={styles.image}>
-            <Img fluid={data.solutionsImage.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />
+            <Img fluid={solutionsImage} style={wrapperStyles} imgStyle={imageStyles} />
           </div>
           <div className={styles.content}>
             <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
@@ -144,6 +156,20 @@ export const data = graphql`
       }
     }
     solutionsImage: file(relativePath: { eq: "pages/home/solutions.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 80)  {
+          aspectRatio
+          base64
+          sizes
+          src
+          srcSet
+          srcWebp
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    solutionsImageMobile: file(relativePath: { eq: "pages/home/solutions-mobile.png" }) {
       childImageSharp {
         fluid(maxWidth: 500, quality: 80)  {
           aspectRatio

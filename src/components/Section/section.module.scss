@@ -9,6 +9,13 @@
     &.circular {
         padding: 8rem 0 12rem 0
     }
+
+    @media screen and (max-width: 768px) {
+        &.circular {
+            margin: 4rem 0;
+            padding: 4rem 0;
+        }
+    }
 }
 
 .heading {

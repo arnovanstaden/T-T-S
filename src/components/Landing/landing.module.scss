@@ -59,7 +59,6 @@
 
 
     @media screen and (min-width: 1600px) {
-
         .image {
 
             .imageCircle {
@@ -67,6 +66,41 @@
                 height: 125%;
                 transform: translate(-25%);
             }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+        height: unset;
+        margin-top: 10vh;
+        align-items: center;
+        column-gap: 0;
+        row-gap: 3rem;
+
+        .image,
+        .content {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .image {
+            width: 80%;
+
+            .imageCircle {
+                width: 90%;
+                height: 90%;
+                border-radius: 50%;
+                // transform: unset;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .image {
+            width: 90%;
         }
     }
 }

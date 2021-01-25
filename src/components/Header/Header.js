@@ -10,10 +10,10 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <div className={styles.brand}>
+        <Link to="/" className={styles.brand}>
           <img src={Logo} alt="Together Through Skills Navbar Logo" />
           <p>Together <span>Through</span> Skills</p>
-        </div>
+        </Link>
         <div className={styles.items}>
           <Link to="/">
             Home

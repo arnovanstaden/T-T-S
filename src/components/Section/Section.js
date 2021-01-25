@@ -17,7 +17,7 @@ const Section = (props) => {
     return (
         <section className={sectionClasses}>
             <div className="container">
-                {props.heading ? <SectionHeading heading={props.heading} /> : null}
+                {props.heading && <SectionHeading heading={props.heading} />}
                 {props.children}
             </div>
         </section>
