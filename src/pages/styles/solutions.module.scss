@@ -147,6 +147,13 @@
     }
 
     @media screen and (max-width: 768px) {
+
+        .intro {
+            .text {
+                width: unset;
+            }
+        }
+
         .listGrid {
             column-gap: 0;
             row-gap: 2rem;

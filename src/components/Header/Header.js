@@ -17,25 +17,20 @@ const Header = () => {
   }
 
   const MobileNav = () => {
+    const navList = ["Home", "About", "Solutions", "Projects", "Contact"]
     return (
-      <Rotate top right>
+      <Rotate top right opposite>
         <div className={styles.mobileMenu}>
           <div className={styles.items}>
-            <Link to="/">
-              Home
-        </Link>
-            <Link to="/about">
-              About
-        </Link>
-            <Link to="/solutions">
-              Solutions
-        </Link>
-            <Link to="/projects">
-              Projects
-        </Link>
-            <Link to="/contact">
-              Contact
-        </Link>
+            {navList.map((item, index) => (
+              <Link
+                key={index}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                onClick={() => toggleNavHandler()}
+              >
+                {item}
+              </Link>
+            ))}
           </div>
           <div className={styles.circle}></div>
         </div>
@@ -74,7 +69,7 @@ const Header = () => {
             Contact
           </Link>
         </div>
-        {navOpen && <MobileNav />}
+        {navOpen ? <MobileNav /> : null}
         <div className={buttonClasses} onClick={() => toggleNavHandler()}>
           <div></div>
           <div></div>

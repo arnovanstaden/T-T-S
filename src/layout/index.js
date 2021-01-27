@@ -13,13 +13,15 @@ import "../global.scss";
 import "../assets/fonts/icons/icons.css";
 
 const Layout = ({ children, location }) => {
+    const footerBackgroundPages = ["/", "/about", "/solutions", "/projects"]
+    console.log(location)
     return (
         <>
             <Header />
             <Transition location={location}>
                 {children}
             </Transition>
-            <Footer />
+            <Footer background={footerBackgroundPages.includes(location.pathname) ? true : false} />
         </>
     )
 }

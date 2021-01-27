@@ -124,6 +124,13 @@
             width: 90%;
         }
 
+        &.solutionsGrid {
+            .image {
+                width: 100%;
+                order: 2;
+            }
+        }
+
         .content {
             width: 100%;
             align-items: center !important;

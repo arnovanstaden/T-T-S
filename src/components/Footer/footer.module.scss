@@ -2,10 +2,13 @@
 
 
 .footer {
-    background-color: rgba($dark-blue, 0.05);
     overflow: hidden;
     padding-top: 4rem;
     position: relative;
+
+    &.background {
+        background-color: rgba($dark-blue, 0.05);
+    }
 
     .footer-grid {
         display: flex;

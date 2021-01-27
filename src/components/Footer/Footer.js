@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
+import classNames from "classnames";
 
 // Styles, Images
 import styles from "./footer.module.scss";
@@ -7,8 +8,13 @@ import FooterLogo from "../../assets/images/logos/full-logo-white.svg";
 
 const Footer = (props) => {
 
+    const footerClasses = classNames(
+        styles.footer,
+        props.background ? styles.background : null
+    )
+
     return (
-        <footer className={styles.footer}>
+        <footer className={footerClasses}>
             <div className="container">
                 <div className={styles.footerGrid}>
                     <img className={styles.logo} src={FooterLogo} alt="" />
