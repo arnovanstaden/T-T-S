@@ -67,8 +67,8 @@ const contact = () => {
                             </div>
                         </div>
                         <div className={styles.form}>
-                            <form action="POST" data-netlify="true">
-                                <input type="hidden" name="form-name" value="contact" />
+                            <form data-netlify="true" name="contact" method="post">
+                                <input type="hidden" name="contact" value="contact" />
                                 <div className={styles.formGroup}>
                                     <label htmlFor="Name">Your Name</label>
                                     <input type="text" name="Name" />
