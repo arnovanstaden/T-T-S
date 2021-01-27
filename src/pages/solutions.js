@@ -5,6 +5,8 @@ import Layout from "../components/Layout/Layout";
 import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
 import FooterOutro from "../components/Footer/FooterOutro";
+import Example from "../components/Solutions/Example";
+import SellingPoints from "../components/Solutions/SellingPoints";
 
 // Styles
 import styles from "./styles/solutions.module.scss"
@@ -44,8 +46,24 @@ const solutions = ({ data }) => {
 
       <Section heading={<h1>Our <span>Solutions</span></h1>}>
         <div className={styles.solutions}>
-          <div className="intro">
-            <p>Whether the solution lies in learnerships, bursaries, internships, apprenticeships, or entrepreneurial opportunities, we will work with our clients to ensure that a customised solution is offered to meet their transformation agenda.</p>
+          <div className={styles.intro}>
+            <div className={styles.text}>
+              <p>Whether the solution lies in learnerships, bursaries, internships, apprenticeships, or entrepreneurial opportunities, we will work with our clients to ensure that a customised solution is offered to meet their transformation agenda.</p>
+            </div>
+            <div className={styles.circleGrid}>
+              <div className={styles.circle}>
+                <div>Bursaries</div>
+              </div>
+              <div className={styles.circle}>
+                <div>Internships</div>
+              </div>
+              <div className={styles.circle}>
+                <div>Learnerships</div>
+              </div>
+              <div className={styles.circle}>
+                <div>Startups</div>
+              </div>
+            </div>
           </div>
 
           <div className={styles.listBlock}>
@@ -151,8 +169,9 @@ const solutions = ({ data }) => {
         </div>
       </Section>
 
-      <Section heading={<h1>A Holistic &amp; Ecosystemic <span>Approach</span></h1>}>
-
+      <Section heading={<h1>Our <span>Approach</span></h1>}>
+        <SellingPoints />
+        <Example />
       </Section>
 
       <FooterOutro

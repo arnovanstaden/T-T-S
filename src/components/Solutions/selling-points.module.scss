@@ -1,0 +1,117 @@
+@import "../../global.scss";
+
+.selling-points {
+    padding: 2rem 0;
+    position: relative;
+
+    .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .block {
+            width: 22.5%;
+            padding: 1rem 1rem;
+            background-color: $dark-blue;
+            color: $white;
+            box-sizing: border-box;
+            border-radius: 1rem;
+            position: relative;
+            top: -2rem;
+
+            h6 {
+                text-align: center;
+                font-size: 1rem;
+                margin: 0;
+                border-bottom: 1.5px solid $white;
+                padding-bottom: 0.25rem;
+            }
+
+            ul {
+                padding-left: 1rem;
+                margin: 0;
+                margin-top: 1rem;
+
+                li {
+                    font-size: 0.9rem;
+                }
+            }
+
+            &.unique {
+                background-color: $light-blue;
+                margin-top: 0;
+                top: 0;
+            }
+        }
+
+        &:last-child {
+            .block {
+                top: 2rem;
+
+                &.unique {
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .logo {
+        padding: 4rem 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 6rem;
+        }
+    }
+
+    .backgroundImage {
+        position: absolute;
+        top: 0;
+        z-index: -5;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.05;
+    }
+
+    @media screen and (max-width: 991px) {
+        .grid {
+            flex-wrap: wrap;
+            row-gap: 2rem;
+
+            .block {
+                width: 47.5%;
+                top: unset;
+
+                &:nth-child(3) {
+                    order: 4;
+                }
+
+                &:nth-child(4) {
+                    order: 3;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .grid {
+            flex-wrap: wrap;
+            row-gap: 2rem;
+
+            .block {
+                width: 100%;
+                top: unset;
+
+                &:nth-child(3) {
+                    order: 4;
+                }
+
+                &:nth-child(4) {
+                    order: 3;
+                }
+            }
+        }
+    }
+}
