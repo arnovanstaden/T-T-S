@@ -205,9 +205,11 @@
         }
 
         .contact-circle {
+            width: 150vw;
+            height: 150vw;
             bottom: unset;
-            top: 0;
-            left: -10vw;
+            top: -20vw;
+            left: -60vw;
         }
     }
 }
