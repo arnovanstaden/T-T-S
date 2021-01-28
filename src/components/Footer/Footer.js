@@ -29,9 +29,9 @@ const Footer = (props) => {
                         <li>
                             <Link to="/solutions">Solutions</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/projects">Projects</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/contact">Contact</Link>
                         </li>

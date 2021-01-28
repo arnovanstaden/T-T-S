@@ -1,5 +1,6 @@
 import React from 'react';
-import classNames from "classnames"
+import classNames from "classnames";
+import Zoom from "react-reveal/Zoom"
 
 // Styles, Images
 import styles from "./section.module.scss";
@@ -13,7 +14,9 @@ const SectionHeading = (props) => {
     )
     return (
         <div className={headingClass}>
-            {props.heading}
+            <Zoom>
+                {props.heading}
+            </Zoom>
             <img className={styles.image} src={headingImage} alt="Section Heading Icon" />
         </div>
     )

@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
-import { useMediaQuery } from "react-responsive"
+import { useMediaQuery } from "react-responsive";
+import Fade from "react-reveal/Fade";
+import Roll from "react-reveal/Roll";
 
 // Components
 import Layout from "../components/Layout/Layout";
@@ -57,52 +59,66 @@ const IndexPage = ({ data }) => {
 
       <Section>
         <div className={`${styles.grid} ${styles.aboutGrid}`}>
-          <div className={styles.content}>
-            <SectionHeading heading={<h1><span>About</span> TTS</h1>} smaller={true} />
-            <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
+          <Fade left cascade>
+            <div className={styles.content}>
+              <SectionHeading heading={<h1><span>About</span> TTS</h1>} smaller={true} />
+              <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
 
-            <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
-            <button className="button">
-              <Link to="/about"> Learn More </Link>
-            </button>
-          </div>
-          <div className={styles.image}>
-            <Img fluid={data.aboutImage.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />
-          </div>
+              <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
+              <button className="button">
+                <Link to="/about"> Learn More </Link>
+              </button>
+            </div>
+          </Fade>
+          <Roll right>
+            <div className={styles.image}>
+              <Img fluid={data.aboutImage.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />
+            </div>
+          </Roll>
         </div>
       </Section>
 
       <Section circular={true}>
-        <div className={`${styles.grid} ${styles.solutionsGrid}`}>
-          <div className={styles.image}>
-            <Img fluid={solutionsImage} style={wrapperStyles} imgStyle={imageStyles} />
-          </div>
-          <div className={styles.content}>
-            <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
-            <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
+        <div className={`${styles.grid} ${styles.solutionGrid}`}>
+          <Roll left>
+            <div className={styles.image}>
+              <Img fluid={solutionsImage} style={wrapperStyles} imgStyle={imageStyles} />
+            </div>
+          </Roll>
+          <Fade right>
+            <div className={styles.content}>
+              <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
+              <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
 
-            <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
-            <button className="button">
-              <Link to="/about"> Learn More </Link>
-            </button>
-          </div>
+              <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
+              <button className="button">
+                <Link to="/about"> Learn More </Link>
+              </button>
+            </div>
+          </Fade>
         </div>
         <div className={styles.solutionsCircle}></div>
       </Section>
 
       <Section heading={<h1>Our <span>Projects</span></h1>} >
         <div className={`${styles.grid} ${styles.projectsGrid}`}>
-          <div className={styles.content}>
-            <p>These two e’s, i.e. <span>employment and entrepreneurship</span>, are the key to unlocking economic growth and sustainability.
+          <Fade left>
+            <div className={styles.content}>
+              <p>These two e’s, i.e. <span>employment and entrepreneurship</span>, are the key to unlocking economic growth and sustainability.
           </p>
-          </div>
-          <div className={styles.image}>
-            <Img fluid={data.projectsImage.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />
-          </div>
-          <div className={styles.content}>
-            <p>Underpinning all TTS solutions is a commitment not only to the <span>employability</span> of the youth, but also to their <span>personal development</span>.
+            </div>
+          </Fade>
+          <Roll up>
+            <div className={styles.image}>
+              <Img fluid={data.projectsImage.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />
+            </div>
+          </Roll>
+          <Fade right>
+            <div className={styles.content}>
+              <p>Underpinning all TTS solutions is a commitment not only to the <span>employability</span> of the youth, but also to their <span>personal development</span>.
           </p>
-          </div>
+            </div>
+          </Fade>
         </div>
         <div className={styles.projectsLink}>
           <button className="button">

@@ -3,7 +3,7 @@ import ClassNames from "classnames";
 import Img from "gatsby-image";
 import { useMediaQuery } from "react-responsive";
 import Fade from "react-reveal/Fade"
-import Rotate from "react-reveal/Rotate"
+import Roll from "react-reveal/Roll"
 
 
 // Styles, Images
@@ -38,12 +38,12 @@ const Landing = (props) => {
 
     return (
         <div className={styles.landing}>
-            <Rotate top left>
+            <Roll left>
                 <div className={styles.image}>
                     <Img fluid={props.image} className={styles.imageWrapper} style={imageWrapperStyles} imgStyle={imageStyles} />
                     <div className={styles.imageCircle}></div>
                 </div>
-            </Rotate>
+            </Roll>
             <div className={styles.content}>
                 <Fade right>
                     {props.children}

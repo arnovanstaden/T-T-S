@@ -1,4 +1,7 @@
 import React from 'react';
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
+import LightSpeed from "react-reveal/LightSpeed";
 
 // Components
 import Layout from "../components/Layout/Layout";
@@ -27,20 +30,23 @@ const solutions = ({ data }) => {
       </Landing>
 
       <Section heading={<h1>A Single Point-of-Contact <span>Solution</span></h1>}>
-        <div className={styles.table}>
-          <div className={styles.column}>
-            <h3>Meaning</h3>
-            <p>Solutions that meet your B-BBEE compliance requirements in a way that is meaningful to the beneficiaries.</p>
+        <Fade up cascade>
+          <div className={styles.table}>
+            <div className={styles.column}>
+              <h3>Meaning</h3>
+              <p>Solutions that meet your B-BBEE compliance requirements in a way that is meaningful to the beneficiaries.</p>
+            </div>
+            <div className={styles.column}>
+              <h3>Solutions</h3>
+              <p>A single point-of-contact solution for all your transformation requirements.</p>
+            </div>
+            <div className={styles.column}>
+              <h3>Impact</h3>
+              <p>Transformation initiatives that result in measurable impact i.e. employment and entrepreneurship.</p>
+            </div>
           </div>
-          <div className={styles.column}>
-            <h3>Solutions</h3>
-            <p>A single point-of-contact solution for all your transformation requirements.</p>
-          </div>
-          <div className={styles.column}>
-            <h3>Impact</h3>
-            <p>Transformation initiatives that result in measurable impact i.e. employment and entrepreneurship.</p>
-          </div>
-        </div>
+        </Fade>
+
 
       </Section>
 
@@ -66,105 +72,113 @@ const solutions = ({ data }) => {
             </div>
           </div>
 
-          <div className={styles.listBlock}>
-            <h6> Our proprietary end-to-end process and project management services will result in the creation of either:</h6>
-            <ul className={styles.list}>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+          <Flip top>
+            <div className={styles.listBlock}>
+              <h6> Our proprietary end-to-end process and project management services will result in the creation of either:</h6>
+              <ul className={styles.list}>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 an entry to mid-level skilled workforce; or
               </li>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 start-ups run by individuals who understand the essentials of entrepreneurship in the fourth industrial economy.
               </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
+          </Flip>
 
-          <div className={styles.listBlock}>
-            <h6> Depending on the programme on offer, learning will take place using:</h6>
-            <ul className={styles.list}>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+          <Flip top>
+            <div className={styles.listBlock}>
+              <h6> Depending on the programme on offer, learning will take place using:</h6>
+              <ul className={styles.list}>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 Traditional learnerships
               </li>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 Contact learning
               </li>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 Blended learnerships
               </li>
-              <li>
-                <i className="icon-check_circle_outline"></i>
+                <li>
+                  <i className="icon-check_circle_outline"></i>
                 Online learning
               </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
+          </Flip>
 
           <div className={styles.blueBorder}>
             <p>All courses can be customised, and bespoke courses are also available.
           A learning management system is in place for all tracking, monitoring and reporting purposes.</p>
           </div>
 
-          <div className={styles.listGrid}>
-            <div className={styles.listBlock}>
-              <h6> After consultation with the client, a proposal will be developed which will cover:</h6>
-              <ul className={styles.list}>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+          <Flip left cascade>
+            <div className={styles.listGrid}>
+              <div className={styles.listBlock}>
+                <h6> After consultation with the client, a proposal will be developed which will cover:</h6>
+                <ul className={styles.list}>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Rationale for the proposed offering (Choosing the right programme is essential)
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Selection Process for the chosen programme
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Rollout Plan (including timelines &amp; deliverables)
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Roles and responsibilities (TTS, Client, Learners)
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Budget
                 </li>
-              </ul>
-            </div>
+                </ul>
+              </div>
 
-            <div className={styles.listBlock}>
-              <h6> TTS will fully and comprehensively take care of:</h6>
-              <ul className={styles.list}>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+              <div className={styles.listBlock}>
+                <h6> TTS will fully and comprehensively take care of:</h6>
+                <ul className={styles.list}>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Seta liaison and completion of necessary documentation
 
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Customisation of the learning programme
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Assessment &amp; moderation
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Certification
                 </li>
-                <li>
-                  <i className="icon-check_circle_outline"></i>
+                  <li>
+                    <i className="icon-check_circle_outline"></i>
                   Facilitation
                 </li>
-              </ul>
+                </ul>
+              </div>
             </div>
-          </div>
+          </Flip>
 
-          <div className={styles.blueBlock}>
-            <h3>And you, the client, get your B-BBEE points! </h3>
-          </div>
+          <LightSpeed>
+            <div className={styles.blueBlock}>
+              <h3>And you, the client, get your B-BBEE points! </h3>
+            </div>
+          </LightSpeed>
 
         </div>
       </Section>

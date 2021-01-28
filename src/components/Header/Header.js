@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   const MobileNav = () => {
-    const navList = ["Home", "About", "Solutions", "Projects", "Contact"]
+    const navList = ["Home", "About", "Solutions", "Contact"]
     return (
       <Rotate top right opposite>
         <div className={styles.mobileMenu}>
@@ -62,9 +62,9 @@ const Header = () => {
           <Link to="/solutions">
             Solutions
           </Link>
-          <Link to="/projects">
+          {/* <Link to="/projects">
             Projects
-          </Link>
+          </Link> */}
           <Link to="/contact">
             Contact
           </Link>

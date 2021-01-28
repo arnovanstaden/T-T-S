@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "gatsby";
-import classNames from "classnames"
+import classNames from "classnames";
+import Slide from "react-reveal/slide";
 
 // Styles
 import styles from "./footer.module.scss";
@@ -12,8 +13,7 @@ const FooterOutro = (props) => {
         props.quote ? styles.quote : styles.default
     )
 
-    if (props.quote) {
-
+    const FooterQuote = () => {
         return (
             <div className={footerQuoteClass}>
                 <div className="container">
@@ -24,7 +24,9 @@ const FooterOutro = (props) => {
                 <div className={styles.outroCircle}></div>
             </div>
         )
-    } else {
+    }
+
+    const FooterAction = () => {
         return (
             <div className={footerQuoteClass}>
                 <div className="container">
@@ -38,6 +40,12 @@ const FooterOutro = (props) => {
             </div>
         )
     }
+
+    return (
+        <Slide up>
+            {props.quote ? <FooterQuote /> : <FooterAction />}
+        </Slide>
+    )
 }
 
 export default FooterOutro

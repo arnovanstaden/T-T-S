@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from "gatsby-image";
 import { graphql, useStaticQuery } from "gatsby";
-import { useMediaQuery } from "react-responsive"
+import { useMediaQuery } from "react-responsive";
 
 // Styles, Images
 import styles from "./example.module.scss";
