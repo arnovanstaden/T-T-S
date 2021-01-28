@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "gatsby";
 import classNames from "classnames";
-import Slide from "react-reveal/slide";
+import Slide from "react-reveal/Slide";
 
 // Styles
 import styles from "./footer.module.scss";
