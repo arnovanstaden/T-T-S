@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Rotate from "react-reveal/Rotate";
 import classNames from "classnames";
 

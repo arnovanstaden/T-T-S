@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import { useMediaQuery } from "react-responsive";
@@ -11,12 +11,18 @@ import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
 import SectionHeading from "../components/Section/SectionHeading";
 import FooterOutro from "../components/Footer/FooterOutro";
+import Loader from "../components/Loader/Loader";
 
 // Styles
 import styles from "./styles/index.module.scss"
 
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, text }) => {
+  const [showLoader, setShowLoader] = useState(true)
+
+  const hideLoader = () => {
+    setShowLoader(false)
+  }
 
   // Image Styles
   const wrapperStyles = {
@@ -48,8 +54,8 @@ const IndexPage = ({ data }) => {
       }}
 
     >
-
-      <Landing image={data.landingImage.childImageSharp.fluid}>
+      {showLoader ? <Loader /> : null}
+      <Landing image={data.landingImage.childImageSharp.fluid} hideLoader={hideLoader}>
         <h1>Together <span>Through</span> Skills</h1>
         <p> Together Through Skills (TTS) is a <span>recruitment, training and placement company</span>, focusing on youth employment, entrepreneurship development, rural communities and people living with disabilities</p>
         <button className="button">
@@ -88,9 +94,7 @@ const IndexPage = ({ data }) => {
           <Fade right>
             <div className={styles.content}>
               <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
-              <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
-
-              <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
+              <p>Whether the <span>solution</span> lies in learnerships, bursaries, internships, apprenticeships, or entrepreneurial opportunities, we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
               <button className="button">
                 <Link to="/about"> Learn More </Link>
               </button>

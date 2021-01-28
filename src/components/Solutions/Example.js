@@ -45,7 +45,6 @@ const Example = () => {
     const ExampleImage = () => {
         const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
         const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
-        let image;
 
         if (isTablet) {
             return (
