@@ -26,7 +26,15 @@ const solutions = ({ data }) => {
     >
       <Landing image={data.landingImage.childImageSharp.fluid}>
         <h1>Our <span>Solutions</span></h1>
-        <p> Whether the <span>solution</span> lies in learnerships, bursaries, internships, apprenticeships, or entrepreneurial opportunities, we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
+        <p> Whether the <span>solution</span> lies in </p>
+        <ul>
+          <li><span></span> learnerships</li>
+          <li><span></span> bursaries</li>
+          <li><span></span> internships</li>
+          <li><span></span> apprenticeships</li>
+          <li><span></span> or entrepreneurial opportunities</li>
+        </ul>
+        <p> we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
       </Landing>
 
       <Section heading={<h1>A Single Point-of-Contact <span>Solution</span></h1>}>

@@ -34,6 +34,24 @@
         p span {
             color: $light-blue;
         }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                span {
+                    border-radius: 50%;
+                    height: 0.5rem;
+                    width: 0.5rem;
+                    background-color: $light-blue;
+                    margin-right: 0.75rem;
+                }
+            }
+        }
     }
 
     &.about-grid {
@@ -49,6 +67,10 @@
             p {
                 padding-right: 0;
                 padding-left: 2rem;
+            }
+
+            ul {
+                padding-left: 2.5rem;
             }
         }
     }
@@ -143,6 +165,20 @@
             p:first-child {
                 text-align: center !important;
             }
+
+            ul {
+                padding-left: 0 !important;
+            }
+
+            li {
+                justify-content: center;
+                margin: 0.25rem 0;
+
+                span {
+                    margin-right: 0.25rem;
+                }
+            }
+
         }
 
         &.solutions-grid {

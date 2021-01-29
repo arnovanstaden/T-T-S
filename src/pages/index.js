@@ -57,7 +57,13 @@ const IndexPage = ({ data, text }) => {
       {showLoader ? <Loader /> : null}
       <Landing image={data.landingImage.childImageSharp.fluid} hideLoader={hideLoader}>
         <h1>Together <span>Through</span> Skills</h1>
-        <p> Together Through Skills (TTS) is a <span>recruitment, training and placement company</span>, focusing on youth employment, entrepreneurship development, rural communities and people living with disabilities</p>
+        <p> Together Through Skills (TTS) is a <span>recruitment, training and placement company</span>, focusing on </p>
+        <ul>
+          <li><span></span> youth employment</li>
+          <li><span></span> entrepreneurship development</li>
+          <li><span></span> rural communities</li>
+          <li><span></span> and people living with disabilities</li>
+        </ul>
         <button className="button">
           <Link to="/solutions"> Our Solutions </Link>
         </button>
@@ -94,7 +100,15 @@ const IndexPage = ({ data, text }) => {
           <Fade right>
             <div className={styles.content}>
               <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
-              <p>Whether the <span>solution</span> lies in learnerships, bursaries, internships, apprenticeships, or entrepreneurial opportunities, we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
+              <p>Whether the <span>solution</span> lies in</p>
+              <ul>
+                <li><span></span> learnerships</li>
+                <li><span></span> bursaries</li>
+                <li><span></span> internships</li>
+                <li><span></span> apprenticeships</li>
+                <li><span></span> or entrepreneurial opportunities</li>
+              </ul>
+              <p>we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
               <button className="button">
                 <Link to="/about"> Learn More </Link>
               </button>
