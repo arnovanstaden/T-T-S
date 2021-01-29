@@ -104,7 +104,7 @@ const IndexPage = ({ data, text }) => {
         <div className={styles.solutionsCircle}></div>
       </Section>
 
-      <Section heading={<h1>Our <span>Projects</span></h1>} >
+      {/* <Section heading={<h1>Our <span>Projects</span></h1>} >
         <div className={`${styles.grid} ${styles.projectsGrid}`}>
           <Fade left>
             <div className={styles.content}>
@@ -129,7 +129,7 @@ const IndexPage = ({ data, text }) => {
             <Link to="/projects"> Learn More </Link>
           </button>
         </div>
-      </Section>
+      </Section> */}
 
       <FooterOutro
         default={{
