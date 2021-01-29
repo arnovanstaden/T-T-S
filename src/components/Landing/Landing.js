@@ -39,7 +39,7 @@ const Landing = (props) => {
         <div className={styles.landing}>
             <Roll left>
                 <div className={styles.image}>
-                    <Img loading="eager" onLoad={() => props.hideLoader()} fluid={props.image} className={styles.imageWrapper} style={imageWrapperStyles} imgStyle={imageStyles} />
+                    <Img loading="eager" onLoad={props.hideLoader ? () => props.hideLoader() : null} fluid={props.image} className={styles.imageWrapper} style={imageWrapperStyles} imgStyle={imageStyles} />
                     <div className={styles.imageCircle}></div>
                 </div>
             </Roll>

@@ -11,7 +11,8 @@ const Section = (props) => {
 
     const sectionClasses = classNames(
         styles.section,
-        props.circular ? styles.circular : ""
+        props.circular ? styles.circular : "",
+        props.classNameProp
     )
 
     return (
