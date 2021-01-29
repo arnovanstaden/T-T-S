@@ -8,7 +8,8 @@ import Rotate from "react-reveal/Rotate";
 import Layout from "../components/Layout/Layout";
 import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
-import FooterOutro from "../components/Footer/FooterOutro";
+import FooterOutro from "../components/FooterOutro/FooterOutro";
+
 import SectionHeading from "../components/Section/SectionHeading";
 
 // Styles

@@ -7,7 +7,8 @@ import LightSpeed from "react-reveal/LightSpeed";
 import Layout from "../components/Layout/Layout";
 import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
-import FooterOutro from "../components/Footer/FooterOutro";
+import FooterOutro from "../components/FooterOutro/FooterOutro";
+
 import Example from "../components/Solutions/Example";
 import SellingPoints from "../components/Solutions/SellingPoints";
 

@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Slide from "react-reveal/Slide";
 
 // Styles
-import styles from "./footer.module.scss";
+import styles from "./footer-outro.module.scss";
 
 const FooterOutro = (props) => {
 
@@ -13,14 +13,28 @@ const FooterOutro = (props) => {
         props.quote ? styles.quote : styles.default
     )
 
+    const MovingCircles = () => {
+        return (
+            <div className={styles.movingCircles}>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        )
+    }
+
     const FooterQuote = () => {
         return (
             <div className={footerQuoteClass}>
                 <div className="container">
-                    <h1>“</h1>
-                    {props.quote.text}
-                    <p>- {props.quote.author}</p>
+                    <div className={styles.content}>
+                        <h1>“</h1>
+                        {props.quote.text}
+                        <p>- {props.quote.author}</p>
+                    </div>
                 </div>
+                <MovingCircles />
                 <div className={styles.outroCircle}></div>
             </div>
         )
@@ -30,12 +44,15 @@ const FooterOutro = (props) => {
         return (
             <div className={footerQuoteClass}>
                 <div className="container">
-                    <h1>{props.default.heading}</h1>
-                    <p>{props.default.text}</p>
-                    <button className="button">
-                        <Link to={props.default.to}>{props.default.buttonText}</Link>
-                    </button>
+                    <div className={styles.content}>
+                        <h1>{props.default.heading}</h1>
+                        <p>{props.default.text}</p>
+                        <button className="button">
+                            <Link to={props.default.to}>{props.default.buttonText}</Link>
+                        </button>
+                    </div>
                 </div>
+                <MovingCircles />
                 <div className={styles.outroCircle}></div>
             </div>
         )

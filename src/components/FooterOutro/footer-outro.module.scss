@@ -1,0 +1,145 @@
+@import "../../global.scss";
+
+
+.footer-quote {
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 0 6rem 0;
+    text-align: center;
+
+    .content {
+        z-index: 200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &.default {
+        h1 {
+            color: $light-blue;
+            margin: 0;
+        }
+
+        p {
+            font-family: $heading-font;
+            margin: 1rem 0 1.5rem 0;
+        }
+    }
+
+    &.quote {
+        h1 {
+            color: $dark-blue;
+            font-size: 10rem;
+            line-height: 0.2;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            margin: 0;
+            margin-bottom: 1rem;
+
+
+            span {
+                color: $light-blue;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-style: italic;
+            margin: 0;
+        }
+    }
+
+
+    .outro-circle {
+        background-color: rgba($dark-blue, 0.05);
+        width: 200vw;
+        height: 200vw;
+        z-index: -5;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+    }
+
+    .moving-circles {
+        width: 100%;
+        height: 85%;
+        position: absolute;
+        bottom: 0;
+        z-index: 100;
+
+        >div {
+            width: 3rem;
+            height: 3rem;
+            background-color: $dark-blue;
+            border-radius: 50%;
+            position: absolute;
+            animation: movecircle;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+        }
+
+        >div:nth-child(even) {
+            background-color: $light-blue;
+            width: 2rem;
+            height: 2rem;
+            animation-direction: reverse;
+            animation-duration: 7s;
+        }
+
+        >div:nth-child(1) {
+            top: 20%;
+            left: 20%;
+        }
+
+        >div:nth-child(2) {
+            top: 20%;
+            right: 20%;
+        }
+
+        >div:nth-child(3) {
+            top: 70%;
+            left: 70%;
+        }
+
+        >div:nth-child(4) {
+            top: 70%;
+            left: 10%;
+        }
+
+
+        @keyframes movecircle {
+            0% {
+                transform: rotate(0deg) translateX(1rem) rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(1rem) rotate(-180deg);
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .moving-circles {
+            height: 110%;
+
+            >div {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            >div:nth-child(even) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}

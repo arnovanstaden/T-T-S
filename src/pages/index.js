@@ -10,7 +10,8 @@ import Layout from "../components/Layout/Layout";
 import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
 import SectionHeading from "../components/Section/SectionHeading";
-import FooterOutro from "../components/Footer/FooterOutro";
+import FooterOutro from "../components/FooterOutro/FooterOutro";
+
 import Loader from "../components/Loader/Loader";
 
 // Styles

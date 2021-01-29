@@ -6,7 +6,8 @@ import Img from "gatsby-image";
 import Layout from "../components/Layout/Layout";
 import Landing from "../components/Landing/Landing";
 import Section from "../components/Section/Section";
-import FooterOutro from "../components/Footer/FooterOutro";
+import FooterOutro from "../components/FooterOutro/FooterOutro";
+
 
 import styles from "./styles/projects.module.scss";
 

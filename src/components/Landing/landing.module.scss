@@ -35,6 +35,8 @@
         justify-content: center;
         align-items: flex-start;
         padding: 0 4rem;
+        position: relative;
+        z-index: 200;
 
         h1 {
             font-size: 2rem;
