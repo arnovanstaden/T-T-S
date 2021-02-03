@@ -30,7 +30,7 @@ const Head = ({ pageMeta }) => {
             <meta property="og:image:height" content="500" />
             <meta property="og:image:alt" content="Together Through Skills Logo" />
 
-            {/* Stylesheets */}
+            <meta name="google-site-verification" content="hK-A2Zj7lCMxpItHK-ITFxsO90Xbgt0pbiBfiMb6u3w" />
 
         </Helmet >
     )
