@@ -18,7 +18,8 @@ const projects = ({ data }) => {
             pageMeta={{
                 title: "Projects | TTS",
                 description: "Together Through Skills (TTS) is a recruitment, training and placement company, focusing on youth employment, entrepreneurship development, rural communities and people living with disabilities.",
-                canonical: "/projects"
+                canonical: "/projects",
+                robots: "noindex, nofollow"
             }}
 
         >
