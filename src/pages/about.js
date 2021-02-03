@@ -89,8 +89,9 @@ const about = ({ data }) => {
           <div className={styles.difference}>
             <SectionHeading heading={<h1>Finding a <span>“Why”</span></h1>} />
             <Fade up>
-              <p>While TTS’s programmes will target individuals with high potential, our efforts will always be aimed at making a difference at a community level by ensuring that individuals are able to use their skills to impact the communities in which they live. In this way, TTS aims to find holistic solutions to South Africa’s skills shortage.</p>
-              <p>Underpinning all TTS solutions is a commitment not only to the employability of the youth, but also to their personal development. Whether we are creating a worker or an entrepreneur, personal mastery and a growth mindset are seen as the key to success.</p>
+              <p>TTS’s homegrown skills development solutions are firmly opposed to the headcount approach that characterises many similar initiatives. By contrast, our solutions aim to facilitate a process whereby each learner finds his/her ‘why’. It is our belief that purpose-driven initiatives, which aim to uncover in each learner their reason for being, stand a far greater chance of success and longevity. For some learners, the solution will be employment whereas for others it will be entrepreneurship. In either case, learners will be equipped with both the hard and soft skills necessary to survive and thrive within their communities. </p>
+
+              <p>TTS clients can rest assured knowing that they have contributed meaningfully to unlocking value and positively changing lives within the South African economy. In addition, we will work with our clients to explore marketing and branding opportunities wherever relevant.</p>
             </Fade>
           </div>
           <div className={styles.middleCircle}></div>
