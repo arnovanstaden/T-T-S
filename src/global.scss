@@ -149,4 +149,24 @@ h6 {
             color: $white;
         }
     }
+
+    &--full {
+        background-color: $light-blue;
+
+        a {
+            color: $white;
+        }
+
+        &:hover {
+            background-color: $dark-blue;
+            border-color: $dark-blue;
+
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+
 }

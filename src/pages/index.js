@@ -4,6 +4,8 @@ import Img from "gatsby-image";
 import { useMediaQuery } from "react-responsive";
 import Fade from "react-reveal/Fade";
 import Roll from "react-reveal/Roll";
+import Flip from "react-reveal/Flip";
+import Bounce from "react-reveal/Bounce";
 
 // Components
 import Layout from "../components/Layout/Layout";
@@ -57,30 +59,43 @@ const IndexPage = ({ data, text }) => {
     >
       {showLoader ? <Loader /> : null}
       <Landing image={data.landingImage.childImageSharp.fluid} hideLoader={hideLoader}>
-        <h1>Together <span>Through</span> Skills</h1>
-        <p> Together Through Skills (TTS) is a <span>recruitment, training and placement company</span>, focusing on </p>
-        <ul>
-          <li><span></span> youth employment</li>
-          <li><span></span> entrepreneurship development</li>
-          <li><span></span> rural communities</li>
-          <li><span></span> and people living with disabilities</li>
-        </ul>
-        <button className="button">
-          <Link to="/solutions"> Our Solutions </Link>
-        </button>
+        <div className={styles.landing}>
+          <h1>Together <span>Through</span> Skills</h1>
+          <Fade right cascade delay={1000}>
+            <ul>
+              <li><span></span> Employment &amp; </li>
+              <li><span></span> Entrepreneurship</li>
+            </ul>
+          </Fade>
+
+          <Fade right delay={2000}>
+            <p> are the keys to unlocking economic <span>growth</span> and <span>sustainability</span>.</p>
+          </Fade>
+
+          <div className={styles.landingLinks}>
+            <Flip top delay={3000}>
+              <button className="button button--full">
+                <Link to="/solutions"> Our Solutions </Link>
+              </button>
+              <button className="button button--full">
+                <Link to="/contact"> Partner With Us </Link>
+              </button>
+            </Flip>
+          </div>
+        </div>
       </Landing>
 
       <Section>
         <div className={`${styles.grid} ${styles.aboutGrid}`}>
           <Fade left cascade>
             <div className={styles.content}>
-              <SectionHeading heading={<h1><span>About</span> TTS</h1>} smaller={true} />
-              <p>As with all <span>education</span>, the key to a successful learnership lies not in the educational event or process itself, but rather in the opportunity offered to the learners to apply their learning.</p>
-
-              <p><span>TTS aims to upskill and integrate South African youth</span> into the world of work, by leveraging the Skills Development and Corporate Social Investment components of the B-BBEE Act. </p>
-              <button className="button">
-                <Link to="/about"> Learn More </Link>
-              </button>
+              <SectionHeading heading={<h1><span>What</span> We Do</h1>} smaller={true} />
+              <p>Together Through Skills aims to <span>upskill</span> and <span>integrate</span> South African youth into the world of work.</p>
+              <Bounce left delay={1500}>
+                <button className="button">
+                  <Link to="/about"> About Us</Link>
+                </button>
+              </Bounce>
             </div>
           </Fade>
           <Roll right>
@@ -100,19 +115,25 @@ const IndexPage = ({ data, text }) => {
           </Roll>
           <Fade right>
             <div className={styles.content}>
-              <SectionHeading heading={<h1>Our <span>Solutions</span></h1>} smaller={true} />
-              <p>Whether the <span>solution</span> lies in</p>
-              <ul>
-                <li><span></span> learnerships</li>
-                <li><span></span> bursaries</li>
-                <li><span></span> internships</li>
-                <li><span></span> apprenticeships</li>
-                <li><span></span> or entrepreneurial opportunities</li>
-              </ul>
-              <p>we will work with our clients to ensure that a customised solution is offered to meet their <span>transformation agenda</span>.</p>
-              <button className="button">
-                <Link to="/about"> Learn More </Link>
-              </button>
+              <SectionHeading heading={<h1>How <span>We Do It</span></h1>} smaller={true} />
+              <p>By leveraging the <span>Skills Development</span> and <span>Corporate Social Investment </span> components of the <span>B-BBEE Act</span>, TTS will achieve this objective in two primary ways:</p>
+              <Fade right cascade delay={1000}>
+                <ul>
+                  <li>
+                    <span></span>
+                    <p>full-service management of learnerships, leading to employment; as well as</p>
+                  </li>
+                  <li>
+                    <span></span>
+                    <p>facilitating entrepreneurial opportunities for youth who are unable to be absorbed into the rapidly shrinking job market.</p>
+                  </li>
+                </ul>
+              </Fade>
+              <Bounce right delay={3000}>
+                <button className="button">
+                  <Link to="/solutions"> Our Solutions </Link>
+                </button>
+              </Bounce>
             </div>
           </Fade>
         </div>

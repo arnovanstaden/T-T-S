@@ -5,7 +5,7 @@ import styles from "./landing-animation.module.scss"
 
 const LandingAnimation = () => {
     return (
-        <Fade>
+        <Fade delay={500}>
             <div className={styles.animation}>
                 <div></div>
                 <div></div>
