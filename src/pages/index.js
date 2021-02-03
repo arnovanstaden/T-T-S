@@ -121,11 +121,11 @@ const IndexPage = ({ data, text }) => {
                 <ul>
                   <li>
                     <span></span>
-                    <p>full-service management of learnerships, leading to employment; as well as</p>
+                    <p>full-service management of learnerships, leading to <span>employment</span>; as well as</p>
                   </li>
                   <li>
                     <span></span>
-                    <p>facilitating entrepreneurial opportunities for youth who are unable to be absorbed into the rapidly shrinking job market.</p>
+                    <p>facilitating <span>entrepreneurial opportunities</span> for youth who are unable to be absorbed into the rapidly shrinking job market.</p>
                   </li>
                 </ul>
               </Fade>
