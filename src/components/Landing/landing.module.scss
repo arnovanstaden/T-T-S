@@ -49,9 +49,13 @@
             margin: 1rem 0;
         }
 
-        h1 span,
-        p span {
+        h1 span {
             color: $light-blue;
+        }
+
+        p span {
+            color: $dark-blue;
+            font-weight: 600;
         }
 
         ul {
