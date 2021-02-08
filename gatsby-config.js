@@ -38,6 +38,6 @@ module.exports = {
   siteMetadata: {
     title: "Together Through Skills",
     author: "Webdacity",
-    siteUrl: `https://t-t-s.co.za`,
+    siteUrl: `https://www.t-t-s.co.za`,
   },
 }
