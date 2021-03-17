@@ -1,17 +1,15 @@
 @import "../../global.scss";
 
 .table {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
-
 
     .column {
         border: 2px solid $light-blue;
         border-radius: 1rem;
         padding: 1rem 1.5rem;
         text-align: center;
-        width: 33%;
 
         h3 {
             margin: 0;
@@ -28,9 +26,8 @@
     }
 
     @media screen and (max-width: 768px) {
-        column-gap: 0;
+        grid-template-columns: 1fr;
         row-gap: 1.5rem;
-        flex-wrap: wrap;
 
         .column {
             width: 100%;
@@ -51,16 +48,16 @@
         }
 
         .circle-grid {
-            width: 100%;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            width: 80%;
             padding: 2rem 0;
-            column-gap: 2rem;
-            row-gap: 2rem;
-            flex-wrap: wrap;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1rem;
+            row-gap: 1rem;
 
             .circle {
-                // width: 20%;
+                display: flex;
+                justify-content: center;
 
                 >div {
                     background-color: $dark-blue;
@@ -152,7 +149,14 @@
             .text {
                 width: unset;
             }
+
+            .circle-grid {
+                grid-template-columns: 1fr 1fr;
+                width: 100%;
+            }
         }
+
+
 
         .listGrid {
             column-gap: 0;
